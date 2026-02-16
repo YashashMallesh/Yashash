@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashash</title>
+  <script src="portfolio.js"></script>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body>
+  <section class="title">
+    <div class="title-content">
+      <h3>Certicates</h3>
+    </div>
+  </section>
+  <section class="slider-container">
+    <div class="slider-images">
+      <div class="slider-img">
+        <img src="img/p5.jpg" alt="1" />
+        <h1>NASA</h1>
+        <div class="details">
+          <h2>NASA Space Apps Challenge participation 
+            Certicate
+          </h2>
+          <p>Certified by NASA Space Apps</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="img/p3.jpg" alt="3" />
+        <h1>IBMCred</h1>
+        <div class="details">
+          <h2>IBM Skillbuild course on AI Literacy</h2>
+          <p>Certified by IBM Skillsbuild</p>
+        </div>
+      </div>
+      <div class="slider-img active">
+        <img src="img/p2.jpg" alt="4" />
+        <h1>HP</h1>
+        <div class="details">
+          <h2>Agile Project 
+            Management Course for Project Management skills</h2>
+          <p>Certified by HP</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="img/p1.jpg" />
+        <h1>INFOSYS</h1>
+        <div class="details">
+          <h2>INFOSYS Springboard
+             Course on Job Scheduling</h2>
+          <p>Certified by Infosys Springboard</p>
+        </div>
+        
+      </div>
+      <div class="slider-img">
+        <img src="img/p4.jpg" alt="7" />
+        <h1>INFOSYS</h1>
+        <div class="details">
+          <h2>Digital Design and Computer electronics</h2>
+          <p>Issued by Infosys Springboard</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="portfolio.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".slider-img").on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+</body>
+
+</html>
