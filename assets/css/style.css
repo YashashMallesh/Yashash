@@ -194,7 +194,7 @@ a {
 .button {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #000000c9;
-  box-shadow: 0 14px 30px rgba(123, 93, 255, 0.35);
+  box-shadow: 0 14px 30px rgba(225, 222, 238, 0.123);
 }
 
 .button:hover {
@@ -228,8 +228,10 @@ a {
 .hero__visual {
   position: relative;
   min-height: 360px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background: radial-gradient(100% 100% at 20% 20%, rgba(92, 221, 255, 0.08), transparent 55%),
-    radial-gradient(100% 100% at 80% 0%, rgba(123, 93, 255, 0.1), transparent 60%),
+    radial-gradient(100% 100% at 80% 0%, rgba(179, 176, 189, 0.1), transparent 60%),
     rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -343,8 +345,8 @@ a {
   gap: 8px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(123, 93, 255, 0.1);
-  color: #dcd5ff;
+  background: rgba(93, 244, 255, 0.1);
+  color: #cbecee;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -391,7 +393,7 @@ a {
 }
 
 .stat {
-  background: linear-gradient(135deg, rgba(123, 93, 255, 0.25), rgba(92, 221, 255, 0.18));
+  background: linear-gradient(135deg, rgba(176, 240, 245, 0.384), rgba(92, 236, 255, 0.082));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 18px;
@@ -412,7 +414,9 @@ a {
 
 .cta {
   text-align: center;
-  background: linear-gradient(135deg, rgba(123, 93, 255, 0.2), rgba(92, 221, 255, 0.2));
+  backdrop-filter: blur(20%);
+  -webkit-backdrop-filter: blur(20%);
+  background: linear-gradient(135deg, rgba(123, 93, 255, 0.055), rgba(164, 230, 248, 0.267));
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 48px 28px;
