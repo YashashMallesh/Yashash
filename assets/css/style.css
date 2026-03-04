@@ -26,8 +26,8 @@
   font-family: "Tiny5", sans-serif;
   font-weight: 500;
   font-style: bold;
-  font-size: xx-large;
-  color: #b3c7ee;
+  font-size: 15rem;
+  color: hsl(177, 19%, 56%);
   text-align: center;
 }
 .image{
@@ -479,4 +479,5 @@ a {
     transition-duration: 0.001ms !important;
   }
 }
+
 
