@@ -16,6 +16,18 @@
 *::after {
   box-sizing: border-box;
 }
+.logo img{
+	height: 50px;
+	width: auto;
+	display: block;
+  border-radius: 25px;
+  opacity: 0.8;
+}
+.logo{
+	text-align: center;
+	margin: 20px 0;
+}
+
 .intro{
   margin-left: 0%;
   margin-bottom: 100px;
@@ -61,10 +73,10 @@ body {
   color: var(--text);
   background-color: #0f0f0f;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(121, 122, 122, 0.15), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(121, 122, 122, 0.164), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(144, 145, 146, 0.1), transparent 40%),
-    linear-gradient(rgba(138, 134, 134, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 123, 123, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(138, 134, 134, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 123, 123, 0.068) 1px, transparent 1px);
 
   background-size:
     100% 100%,
@@ -73,6 +85,7 @@ body {
     40px 40px;
   background-position: 0 0, 0 0, -20px -20px, 0 0;
   margin: blur(10px);
+  background-attachment: fixed;
 }
 
 a {
