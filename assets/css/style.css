@@ -7,7 +7,7 @@
   --accent: hsla(177, 19%, 56%, 0.952);
   --accent-2: #00dffca9;
   --border: rgba(255, 255, 255, 0.137);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.301);
+  --shadow: 0 20px 60px rgba(126, 126, 126, 0.123);
   --radius: 18px;
 }
 .lightmode{
@@ -16,10 +16,10 @@
   --card: #ac99875d;
   --muted: #63626279;
   --text2: #28292b;
-  --accent: hsla(30, 4%, 42%, 0.952);
-  --accent-2: #837f7ba9;
-  --border: rgba(85, 85, 85, 0.486);
-  --shadow: 0 20px 60px rgba(255, 255, 255, 0.301);
+  --accent: hsla(0, 1%, 69%, 0.849);
+  --accent-2: #6b6b6ba9;
+  --border: rgba(85, 85, 85, 0.397);
+  --shadow: 0 20px 60px rgba(75, 75, 75, 0.445);
   --radius: 18px;
 }
 
@@ -34,7 +34,7 @@
 	width: auto;
 	display: block;
   border-radius: 25px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .logo{
 	text-align: center;
@@ -177,6 +177,7 @@ a {
   color: #0c0d12;
 }
 
+
 .brand__name {
   font-weight: 700;
   margin: 0;
@@ -185,6 +186,11 @@ a {
 .brand__role {
   margin: 2px 0 0;
   color: var(--muted);
+  font-size: 0.92rem;
+}
+.lightmode .brand__role{
+  margin: 2px 0 0;
+  color: rgba(95, 52, 23, 0.808);
   font-size: 0.92rem;
 }
 
@@ -225,6 +231,12 @@ a {
 .nav__links .pill {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #0c0d12;
+  padding: 10px 16px;
+  border-radius: 999px;
+}
+.lightmode .nav__links .pill {
+  background: linear-gradient(135deg, rgba(124, 124, 124, 0.8),rgba(255, 255, 255, 0.8));
+  color: #252525;
   padding: 10px 16px;
   border-radius: 999px;
 }
@@ -292,9 +304,14 @@ a {
 }
 
 .button {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(125deg, var(--accent), var(--accent-2));
   color: #000000c9;
   box-shadow: 0 14px 30px rgba(225, 222, 238, 0.123);
+}
+.lightmode .button {
+  background: linear-gradient(135deg, rgba(124, 124, 124, 0.8),rgba(255, 255, 255, 0.8));
+  color: #252525;
+  box-shadow: 0 14px 30px rgba(78, 78, 78, 0.25);
 }
 
 .button:hover {
@@ -726,3 +743,41 @@ background: rgba(131, 127, 123, 0.04);
   }
 }
 
+/* Theme toggle (added without altering existing theme rules) */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--accent-2), white 20%);
+  outline-offset: 3px;
+}
+
+.theme-toggle__icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff 0 35%, transparent 36%),
+    linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.lightmode .theme-toggle {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(85, 85, 85, 0.35);
+  color: var(--text2);
+}
