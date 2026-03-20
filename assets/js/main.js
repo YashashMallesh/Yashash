@@ -4,6 +4,32 @@ const canAnimate = !prefersReducedMotion.matches && typeof gsap !== "undefined";
 const q = (selector) => document.querySelector(selector);
 const qa = (selector) => Array.from(document.querySelectorAll(selector));
 
+function setupThemeToggle() {
+  const THEME_KEY = "theme";
+  const btn = q("#themeToggle");
+
+  const apply = (mode) => {
+    const isLight = mode === "light";
+    document.body.classList.toggle("lightmode", isLight);
+    if (btn) btn.setAttribute("aria-pressed", String(isLight));
+  };
+
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === "light" || saved === "dark") {
+    apply(saved);
+  } else {
+    const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+    apply(prefersLight ? "light" : "dark");
+  }
+
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const isLightNow = document.body.classList.toggle("lightmode");
+    localStorage.setItem(THEME_KEY, isLightNow ? "light" : "dark");
+    btn.setAttribute("aria-pressed", String(isLightNow));
+  });
+}
+
 function animateHero() {
   const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.9 } });
 
@@ -69,6 +95,8 @@ function parallaxOrbs() {
 }
 
 function init() {
+  setupThemeToggle();
+
   if (!canAnimate) {
     document.documentElement.style.scrollBehavior = "smooth";
     return;
